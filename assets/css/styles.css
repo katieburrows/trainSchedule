@@ -6,9 +6,30 @@ body {
     background-size: 100%;
     width: 80%;
     margin: 0 auto; 
-    color: #666666; 
+    margin-top: 1%;
+    color: white;
+     
 }
 
 .jumbotron {
     text-align: center;
 }
+
+.btn {
+    margin-bottom: 2%;
+}
+footer {
+background-color: #78C2AD;
+text-align: center;
+padding-top: 20px;
+padding-bottom: 30px;
+width: 125%;
+margin-left: -12.5%;
+/* left: 0;
+display: block;
+position: fixed;
+bottom: -15px; */
+}
+/* .table {
+    border-radius: 15px;
+} */
