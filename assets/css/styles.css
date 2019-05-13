@@ -8,3 +8,7 @@ body {
     margin: 0 auto; 
     color: #666666; 
 }
+
+.jumbotron {
+    text-align: center;
+}
