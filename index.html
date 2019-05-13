@@ -3,11 +3,77 @@
     <head>
         <meta charset="utf-8">
         <title>Train Schedule</title>
+
+        <!-- bootswatch cdn -->
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet" integrity="sha384-9NlqO4dP5KfioUGS568UFwM3lbWf3Uj3Qb7FBHuIuhLoDp3ZgAqPE1/MYLEBPZYM" crossorigin="anonymous">
+
+        <!-- my stylesheet -->
         <link rel="stylesheet" href="assets/css/styles.css">
     </head>
     <body>
-
+        <div class="jumbotron">
+            <h1 class="display-3">Train Schedule</h1>
+        </div>
         
+        <section>
+                <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Type</th>
+                            <th scope="col">Column heading</th>
+                            <th scope="col">Column heading</th>
+                            <th scope="col">Column heading</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+                          <tr class="table-info">
+                            <th scope="row">Info</th>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                            <td>Column content</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table> 
+        </section>
+        
+        <section>        
+            <form>
+                <fieldset>
+                    <legend>Add a Train</legend>
+
+                    <div class="form-group">
+                        <label for="trainName">Train Name</label>
+                        <input type="text" class="form-control" id="trainName" aria-describedby="trainName" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" class="form-control" id="destination" aria-describedby="emailHelp" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">First Train Time (HH:mm - military time)</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Frequency (in min)</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+
+
+
+
+
+
+
         <script src="assets/javascript/logic.js"></script>
     </body>
 </html>
