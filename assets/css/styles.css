@@ -13,11 +13,13 @@ body {
 
 .jumbotron {
     text-align: center;
+    color: gray;
 }
 
 .btn {
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
+
 footer {
 background-color: #78C2AD;
 text-align: center;
@@ -25,11 +27,4 @@ padding-top: 20px;
 padding-bottom: 30px;
 width: 125%;
 margin-left: -12.5%;
-/* left: 0;
-display: block;
-position: fixed;
-bottom: -15px; */
 }
-/* .table {
-    border-radius: 15px;
-} */
