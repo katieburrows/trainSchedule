@@ -38,16 +38,12 @@ $(document).ready(function() {
 
   database.ref().on("child_added", function(snapshot){
     var sv = snapshot.val();
-    var trainName = $("<td>").text(sv.trainName);
-    var destination = $("<td>").text(sv.destination);
-    var firstTrain = $("<td>").text(sv.firstTrain);
-    var frequency = $("<td>").text(sv.frequency);
+    var trainName = sv.trainName;
+    var destination = sv.destination;
+    var firstTrain = sv.firstTrain;
+    var frequency = sv.frequency;
 
-    // var newTr = "";
-
-    // newTr.append(trainName, destination, firstTrain, frequency);
-
-    // $("tbody").append(newTr);
+    $("#trains > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + firstTrain + "</td><td>" + frequency + "</td></tr>");
 
   }, function (errorObject){
       console.log("Errors handled: " + errorObject);
