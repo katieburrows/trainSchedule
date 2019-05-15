@@ -43,7 +43,7 @@ $(document).ready(function() {
     var firstTrain = sv.firstTrain;
     var frequency = sv.frequency;
 
-    $("#trains > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + firstTrain + "</td><td>" + frequency + "</td></tr>");
+    $("#trains > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td></tr>");
 
   }, function (errorObject){
       console.log("Errors handled: " + errorObject);
