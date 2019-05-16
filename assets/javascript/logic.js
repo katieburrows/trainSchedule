@@ -43,7 +43,18 @@ $(document).ready(function() {
     var firstTrain = sv.firstTrain;
     var frequency = sv.frequency;
 
-    $("#trains > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td></tr>");
+    var firstTrainOneYearAgo = moment(firstTrain, "hh:mm").subtract(1, "years");
+
+    var currentTime = moment();
+
+    var diffTime = currentTime.diff(moment(firstTrainOneYearAgo), "minutes");
+
+    var remainder = diffTime % frequency;
+
+    var minutesAway = frequency - remainder;
+
+
+    $("#trains > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + minutesAway + "</td></tr>");
 
   }, function (errorObject){
       console.log("Errors handled: " + errorObject);
@@ -53,3 +64,7 @@ $(document).ready(function() {
 
 
 }) 
+
+//moment.js to :
+    //calculate next arrival
+        //use next arrival to calculate minutes until next arrival
