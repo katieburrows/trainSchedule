@@ -56,7 +56,7 @@ $(document).ready(function() {
 
     var nextArrival = currentTime.add(minutesAway, "minutes");
 
-    nextArrival = moment(nextArrival).format("hh:mm");
+    nextArrival = moment(nextArrival).format("hh:mm A");
 
     $("#trains > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextArrival + "</td><td>" + minutesAway + "</td></tr>");
 
