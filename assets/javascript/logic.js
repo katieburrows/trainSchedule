@@ -43,6 +43,7 @@ $(document).ready(function() {
     var firstTrain = sv.firstTrain;
     var frequency = sv.frequency;
 
+    //pushed back train time to ensure time would be captured properly.
     var firstTrainOneYearAgo = moment(firstTrain, "hh:mm").subtract(1, "years");
 
     var currentTime = moment();
@@ -53,8 +54,11 @@ $(document).ready(function() {
 
     var minutesAway = frequency - remainder;
 
+    var nextArrival = currentTime.add(minutesAway, "minutes");
 
-    $("#trains > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + minutesAway + "</td></tr>");
+    nextArrival = moment(nextArrival).format("hh:mm");
+
+    $("#trains > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextArrival + "</td><td>" + minutesAway + "</td></tr>");
 
   }, function (errorObject){
       console.log("Errors handled: " + errorObject);
